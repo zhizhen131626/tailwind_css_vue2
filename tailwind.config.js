@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-// const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin')
 module.exports = {
   // 从CSS文件中删除未使用的样式，以减小最终的文件大小
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
@@ -17,10 +17,10 @@ module.exports = {
       // serif: ['Georgia'],
     },
     extend: {
-      // colors: {
-      //   'mycolor1': '#abcdef',
-      //   'mycolor2': 'green',
-      // },
+      colors: {
+        'mycolor1': '#abcdef',
+        'mycolor2': 'green',
+      },
       // spacing: {
       //   '8xl': '9rem',
       //   '9xl': '128rem',
@@ -63,13 +63,13 @@ module.exports = {
     // require('@tailwindcss/container-queries'),
 
     // 通过 编写插件 并使用 addBase 函数来添加基础样式：
-    // plugin(function({ addBase, theme }) {
-    //   addBase({
-    //     'h1': { fontSize: theme('fontSize.2xl') },
-    //     'h2': { fontSize: theme('fontSize.xl') },
-    //     'h3': { fontSize: theme('fontSize.lg') },
-    //   })
-    // })
+    plugin(function({ addBase, theme }) {
+      addBase({
+        'h1': { fontSize: '12px', color: 'red' },
+        'h2': { fontSize: theme('fontSize.2xl') },
+        'h3': { fontSize: theme('fontSize.lg') },
+      })
+    })
   ],
   // 预设：允许您指定自己的自定义基本配置，而不是使用 Tailwind 的默认基本配置。
   // presets: [],

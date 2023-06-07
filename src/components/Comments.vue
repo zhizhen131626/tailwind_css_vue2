@@ -1,32 +1,33 @@
 <template>
-	<!-- 最小高度为屏幕高度 -->
-  <main class="p-4 bg-gray-50 min-h-screen bg-back-img">
+	<!-- 最小高度为屏幕高度  bg-back-img: 背景图片 -->
+  <main class="min-h-screen p-4 bg-gray-50 bg-back-img">
 		<!-- 最大宽度为屏幕尺寸为 xl 的屏幕宽度, 水平居中，内间距，圆角，阴影 -->
-    <div class="max-w-screen-xl mx-auto bg-white p-8 rounded-lg shadow-2xl">
-      <h2 class="text-3xl my-6">评论</h2>
-			<!-- 网格布局 -->
+    <div class="max-w-screen-xl p-8 mx-auto bg-white rounded-lg shadow-2xl">
+      <!-- text-center underline no-underline hover:underline -->
+      <h2 class="my-6 text-3xl">评论</h2>
+			<!-- 网格布局 grid-cols-2 -->
       <form action="" class="grid">
         <textarea
           name="comment"
           id=""
           placeholder="请输入你的评论"
-          class="bg-gray-50 p-2 rounded"
+          class="p-2 rounded bg-gray-50"
         ></textarea>
         <fieldset class="py-4">
           <input
             type="submit"
             value="评论"
-            class="px-4 py-1 bg-blue-600 rounded text-white"
+            class="px-4 py-1 text-white bg-blue-600 rounded"
           />
           <input
             type="reset"
             value="取消"
-            class="px-4 py-1 bg-white rounded border ml-3"
+            class="px-4 py-1 ml-3 bg-white border rounded"
           />
         </fieldset>
       </form>
       <!-- 分隔线 -->
-      <div class="border-b border-gray-300 my-2 mb-4"></div>
+      <div class="my-2 mb-4 border-b border-gray-300"></div>
       <div>
         <!-- 留言 -->
         <div class="flex">
@@ -34,17 +35,17 @@
           <img src="../assets/桌面壁纸01.jpg" alt="" class="w-12 h-12 mr-4 rounded-full" />
           <div>
             <p>hzz</p>
-            <p class="text-gray-600 text-sm">2023-05-05</p>
+            <p class="text-sm text-gray-600">2023-05-05</p>
           </div>
           <!-- 菜单考右对齐 -->
           <span class="ml-auto">
             <img
 							src="../assets/桌面壁纸01.jpg"
-              class="h-5 w-5 text-gray-500"
+              class="w-5 h-5 text-gray-500"
             />
           </span>
         </div>
-        <p class="text-gray-600 py-4">
+        <p class="py-4 text-gray-600">
           111111111111111111111111111
         </p>
         <!-- 留言列表 -->
@@ -54,18 +55,18 @@
               <img src="../assets/桌面壁纸01.jpg" alt="" class="w-12 h-12 mr-4 rounded-full" />
               <div>
                 <p>hzz</p>
-                <p class="text-gray-600 text-sm">2023-05-06</p>
+                <p class="text-sm text-gray-600">2023-05-06</p>
               </div>
             
               <!-- 菜单考右对齐 -->
               <span class="ml-auto">
                 <img
 									src="../assets/桌面壁纸01.jpg"
-                  class="h-5 w-5 text-gray-500"
+                  class="w-5 h-5 text-gray-500"
                 />
               </span>
           </div>
-          <p class="text-gray-600 py-4">
+          <p class="py-4 text-gray-600">
             2222222222222
           </p>
         </div>
@@ -77,32 +78,33 @@
             name="comment"
             id=""
             placeholder="请输入你的评论"
-            class="bg-gray-50 p-2 rounded"
+            class="p-2 rounded bg-gray-50"
           ></textarea>
           <fieldset class="py-4">
             <input
               type="submit"
               value="评论"
-              class="px-4 py-1 bg-blue-600 rounded text-white"
+              class="px-4 py-1 text-white bg-blue-600 rounded"
             />
             <input
               type="reset"
               value="取消"
-              class="px-4 py-1 bg-white rounded border ml-3"
+              class="px-4 py-1 ml-3 bg-white border rounded"
             />
           </fieldset>
         </form>
       </div>
 			<!-- <h1 class=" bg-mycolor1 pl-8xl">111</h1>
-			<h1 class=" bg-mycolor2 pl-8xl">111</h1> -->
+			<h2 class=" bg-mycolor2 pl-8xl">111</h2> -->
 
 			<!-- <img
 				src="../assets/桌面壁纸01.jpg"
-        class=" w-20 h-20 filter-grayscale hover:filter-none"
+        class="w-20 h-20 filter-grayscale hover:filter-none"
       /> -->
 
 			<!-- <div class=" form-input">111</div> -->
 
+      <!-- sr-only: 隐藏元素，当最小屏幕为sm时不隐藏 -->
 			<!-- <div class="sr-only sm:not-sr-only">111</div> -->
 
 			<!-- <img src="../assets/桌面壁纸01.jpg" class=" w-20 h-20 transform rotate-45 ..."/> -->
@@ -116,9 +118,11 @@
 			</button> -->
 
 			<!-- 动态类名 -->
-			<div :class="`bg-${color}-300 hover:bg-${hoverColor}-500 hover:underline text-right text-green-400`">
+			<!-- <div :class="`bg-${color}-300 hover:bg-${hoverColor}-500 hover:underline text-right text-green-400`">
         Hover me
-      </div> 
+      </div>  -->
+
+      <!-- <div class="btn-green">111</div> -->
     </div>
   </main>
 </template>
@@ -140,3 +144,9 @@ export default {
 	}
 }
 </script>
+
+<style>
+.btn-green {
+  @apply text-white bg-green-500 hover:bg-green-700 w-10 h-6 text-center rounded-md;
+}
+</style>
