@@ -14,6 +14,7 @@
           class="p-2 rounded bg-gray-50"
         ></textarea>
         <fieldset class="py-4">
+          <!-- 渐变色： bg-gradient-to-r from-purple-400 via-pink-400 to-red-500 -->
           <input
             type="submit"
             value="评论"
@@ -119,6 +120,7 @@
 			</button> -->
 
 			<!-- 动态类名 -->
+<<<<<<< HEAD
 			<div :class="` bg-${color}-400 hover:bg-${hoverColor}-400`">
         Hover me
       </div> 
@@ -126,13 +128,28 @@
       <!-- <div class="btn-green">111</div> -->
 
       <!-- <div class="absolute top-10 right-10">position</div> -->
+=======
+			<!-- <div :class="`bg-${color}-300 hover:bg-${hoverColor}-500 hover:underline text-right text-green-400`">
+        Hover me
+      </div>  -->
+
+      <!-- 自定义类 -->
+      <!-- <div class="btn">点击</div> -->
+
+      <!-- 兼容组件库 -->
+      <!-- <el-button class="text-white bg-purple-500 ">点击</el-button> -->
+
+>>>>>>> f57a07b551adfbd47352576c20dea2c5ebee158a
     </div>
   </main>
 </template>
 
 <script>
+
 export default {
   name: 'CommentsApp',
+  components: {
+  },
   props: {
     msg: String
   },
@@ -149,7 +166,12 @@ export default {
 </script>
 
 <style>
+<<<<<<< HEAD
 /* .btn-green {
   @apply text-white bg-green-500 hover:bg-green-700 w-10 h-6 text-center rounded-md;
+=======
+/* .btn {
+  @apply w-16 px-4 py-1 bg-blue-600 rounded text-white
+>>>>>>> f57a07b551adfbd47352576c20dea2c5ebee158a
 } */
 </style>
