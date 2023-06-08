@@ -1,7 +1,7 @@
 <template>
 	<!-- 最小高度为屏幕高度 -->
   <main class="p-4 bg-gray-50 min-h-screen bg-back-img">
-		<!-- 最大宽度为屏幕尺寸为 xl 的屏幕宽度, 水平居中，内间距，圆角，阴影 -->
+		<!-- 最大宽度为屏幕尺寸为 xl 的屏幕宽度, 水平居中，内间距，圆角，阴影 hidden: 隐藏 -->
     <div class="max-w-screen-xl mx-auto bg-white p-8 rounded-lg shadow-2xl">
       <h2 class="text-3xl my-6">评论</h2>
 			<!-- 网格布局 -->
@@ -13,6 +13,7 @@
           class="bg-gray-50 p-2 rounded"
         ></textarea>
         <fieldset class="py-4">
+          <!-- 渐变色： bg-gradient-to-r from-purple-400 via-pink-400 to-red-500 -->
           <input
             type="submit"
             value="评论"
@@ -116,16 +117,26 @@
 			</button> -->
 
 			<!-- 动态类名 -->
-			<div :class="`bg-${color}-300 hover:bg-${hoverColor}-500 hover:underline text-right text-green-400`">
+			<!-- <div :class="`bg-${color}-300 hover:bg-${hoverColor}-500 hover:underline text-right text-green-400`">
         Hover me
-      </div> 
+      </div>  -->
+
+      <!-- 自定义类 -->
+      <!-- <div class="btn">点击</div> -->
+
+      <!-- 兼容组件库 -->
+      <!-- <el-button class=" bg-purple-500 text-white">点击</el-button> -->
+
     </div>
   </main>
 </template>
 
 <script>
+
 export default {
   name: 'CommentsApp',
+  components: {
+  },
   props: {
     msg: String
   },
@@ -140,3 +151,9 @@ export default {
 	}
 }
 </script>
+
+<style>
+/* .btn {
+  @apply w-16 px-4 py-1 bg-blue-600 rounded text-white
+} */
+</style>
