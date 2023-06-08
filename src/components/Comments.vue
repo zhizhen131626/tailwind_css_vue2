@@ -2,9 +2,9 @@
 	<!-- 最小高度为屏幕高度  bg-back-img: 背景图片 -->
   <main class="min-h-screen p-4 bg-gray-50 bg-back-img">
 		<!-- 最大宽度为屏幕尺寸为 xl 的屏幕宽度, 水平居中，内间距，圆角，阴影 -->
-    <div class="max-w-screen-xl p-8 mx-auto bg-white rounded-lg shadow-2xl">
+    <div class="relative max-w-screen-xl p-8 mx-auto overflow-y-auto bg-white rounded-lg shadow-2xl h-my-h zz:bg-yellow-400">
       <!-- text-center underline no-underline hover:underline -->
-      <h2 class="my-6 text-3xl">评论</h2>
+      <h2 class="my-6 text-3xl font-bold">评论</h2>
 			<!-- 网格布局 grid-cols-2 -->
       <form action="" class="grid">
         <textarea
@@ -17,7 +17,7 @@
           <input
             type="submit"
             value="评论"
-            class="px-4 py-1 text-white bg-blue-600 rounded"
+            class="px-4 py-1 text-white bg-blue-600 rounded-xxx"
           />
           <input
             type="reset"
@@ -102,6 +102,7 @@
         class="w-20 h-20 filter-grayscale hover:filter-none"
       /> -->
 
+      <!-- form插件 -->
 			<!-- <div class=" form-input">111</div> -->
 
       <!-- sr-only: 隐藏元素，当最小屏幕为sm时不隐藏 -->
@@ -118,11 +119,13 @@
 			</button> -->
 
 			<!-- 动态类名 -->
-			<!-- <div :class="`bg-${color}-300 hover:bg-${hoverColor}-500 hover:underline text-right text-green-400`">
+			<div :class="` bg-${color}-400 hover:bg-${hoverColor}-400`">
         Hover me
-      </div>  -->
+      </div> 
 
       <!-- <div class="btn-green">111</div> -->
+
+      <!-- <div class="absolute top-10 right-10">position</div> -->
     </div>
   </main>
 </template>
@@ -135,8 +138,8 @@ export default {
   },
 	data: () => {
     return {
-      color: 'orange', 
-      hoverColor: 'lime',
+      color: 'pink', 
+      hoverColor: 'yellow',
     }
   },
 	created() {
@@ -146,7 +149,7 @@ export default {
 </script>
 
 <style>
-.btn-green {
+/* .btn-green {
   @apply text-white bg-green-500 hover:bg-green-700 w-10 h-6 text-center rounded-md;
-}
+} */
 </style>

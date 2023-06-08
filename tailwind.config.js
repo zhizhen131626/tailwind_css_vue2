@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 const plugin = require('tailwindcss/plugin')
 module.exports = {
+  // 预设：允许您指定自己的自定义基本配置，而不是使用 Tailwind 的默认基本配置。
+  // presets: [
+  //   require('./tailwind-preset')
+  // ],
   // 从CSS文件中删除未使用的样式，以减小最终的文件大小
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   // 内容：是配置所有 HTML 模板、JS 组件和任何其他包含 Tailwind 类名称的文件的路径的地方。
@@ -11,35 +15,31 @@ module.exports = {
     // colors: {
     //   'mycolor': '#abcdef',
     // },
-    // 字体
-    fontFamily: {
-      // sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont'],
-      // serif: ['Georgia'],
-    },
     extend: {
       colors: {
         'mycolor1': '#abcdef',
         'mycolor2': 'green',
       },
-      // spacing: {
-      //   '8xl': '9rem',
-      //   '9xl': '128rem',
-      // },
-      // borderRadius: {
-      //   '4xl': '2rem',
-      // }
+      spacing: {
+        '8xl': '9rem',
+        '9xl': '128rem',
+        'my-h': '50rem'
+      },
+      borderRadius: {
+        'xxx': '2rem',
+      },
       backgroundImage: {
         'back-img': "url('/src/assets/桌面壁纸01.jpg')",
        }
     },
     // 默认断点的设置来自于常见的设备分辨率。
-    // screens: {
-    //   'hh': '875px', // 屏幕名称  断点开始的地方
-    //   // => @media (min-width: 875px) { ... }
-    //   'ee': {'max': '539px'},
-    //   // => @media (max-width: 739px) { ... }
-    //   'zz': {'min': '640px', 'max': '767px'},
-    // },
+    screens: {
+      'hh': '875px', // 屏幕名称  断点开始的地方
+      // => @media (min-width: 875px) { ... }
+      'ee': {'max': '539px'},
+      // => @media (max-width: 539px) { ... }
+      'zz': {'min': '640px', 'max': '767px'},
+    },
   },
   // 可以使用 "@responsive" 指令来创建自己的响应式 "variants"，并使用它来实现基于窗口大小的样式变化效果。
   variants: {
@@ -57,8 +57,8 @@ module.exports = {
   // 插件：允许向 Tailwind 注册插件，这些插件可用于生成额外的实用程序、组件、基本样式或自定义变体。
   plugins: [
     // 官方插件
-    // require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
+    // require('@tailwindcss/typography'), // 增强排版风格
     // require('@tailwindcss/aspect-ratio'),
     // require('@tailwindcss/container-queries'),
 
@@ -71,8 +71,6 @@ module.exports = {
       })
     })
   ],
-  // 预设：允许您指定自己的自定义基本配置，而不是使用 Tailwind 的默认基本配置。
-  // presets: [],
 
   // 字首：允许您向所有 Tailwind 生成的实用程序类添加自定义前缀。当在可能存在命名冲突的现有 CSS 之上分层 Tailwind 时，非常有用
   // prefix: 'tw-',
