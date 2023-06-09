@@ -100,7 +100,7 @@
 
 			<!-- <img
 				src="../assets/桌面壁纸01.jpg"
-        class="w-20 h-20 filter-grayscale hover:filter-none"
+        class="w-32 h-20 filter-grayscale hover:filter-none"
       /> -->
 
       <!-- form插件 -->
@@ -161,6 +161,13 @@
 
       <!-- 兼容组件库 -->
       <!-- <el-button class="text-white bg-purple-500 ">点击</el-button> -->
+
+      <!-- <div class="btn-blue">button</div> -->
+
+      <!-- <h1>h1</h1>
+      <h2>h2</h2> -->
+
+      
 
     </div>
   </main>

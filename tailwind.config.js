@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin')
+// const plugin = require('tailwindcss/plugin')
 module.exports = {
   // 预设：允许您指定自己的自定义基本配置，而不是使用 Tailwind 的默认基本配置。
   // presets: [
@@ -64,13 +64,13 @@ module.exports = {
     require('@tailwindcss/typography'), // 增强排版风格
 
     // 通过 编写插件 并使用 addBase 函数来添加基础样式：
-    plugin(function({ addBase, theme }) {
-      addBase({
-        'h1': { fontSize: '12px', color: 'red' },
-        'h2': { fontSize: theme('fontSize.2xl') },
-        'h3': { fontSize: theme('fontSize.lg') },
-      })
-    })
+    // plugin(function({ addBase, theme }) {
+    //   addBase({
+    //     'h1': { fontSize: '12px', color: 'red' },
+    //     'h2': { fontSize: theme('fontSize.2xl') },
+    //     'h3': { fontSize: theme('fontSize.lg') },
+    //   })
+    // })
   ],
 
   // 字首：允许您向所有 Tailwind 生成的实用程序类添加自定义前缀。当在可能存在命名冲突的现有 CSS 之上分层 Tailwind 时，非常有用
