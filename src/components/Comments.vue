@@ -104,7 +104,7 @@
       /> -->
 
       <!-- form插件 -->
-			<!-- <div class=" form-input">111</div> -->
+			<!-- <div class=" form-select">form</div> -->
 
       <!-- sr-only: 隐藏元素，当最小屏幕为sm时不隐藏 -->
 			<!-- <div class="sr-only sm:not-sr-only">111</div> -->
@@ -120,26 +120,21 @@
 			</button> -->
 
 			<!-- 动态类名 -->
-<<<<<<< HEAD
-			<div :class="` bg-${color}-400 hover:bg-${hoverColor}-400`">
+			<div :class="` bg-pink-400 hover:bg-${hoverColor}-400`">
         Hover me
       </div> 
 
-      <!-- <div class="btn-green">111</div> -->
-
       <!-- <div class="absolute top-10 right-10">position</div> -->
-=======
 			<!-- <div :class="`bg-${color}-300 hover:bg-${hoverColor}-500 hover:underline text-right text-green-400`">
         Hover me
       </div>  -->
 
       <!-- 自定义类 -->
-      <!-- <div class="btn">点击</div> -->
+      <div class="btn">点击</div>
 
       <!-- 兼容组件库 -->
       <!-- <el-button class="text-white bg-purple-500 ">点击</el-button> -->
 
->>>>>>> f57a07b551adfbd47352576c20dea2c5ebee158a
     </div>
   </main>
 </template>
@@ -166,12 +161,7 @@ export default {
 </script>
 
 <style>
-<<<<<<< HEAD
-/* .btn-green {
-  @apply text-white bg-green-500 hover:bg-green-700 w-10 h-6 text-center rounded-md;
-=======
-/* .btn {
-  @apply w-16 px-4 py-1 bg-blue-600 rounded text-white
->>>>>>> f57a07b551adfbd47352576c20dea2c5ebee158a
-} */
+.btn {
+  @apply w-16 px-4 py-1 bg-blue-600 rounded !text-white text-red-500
+}
 </style>

@@ -75,10 +75,6 @@ module.exports = {
   // 字首：允许您向所有 Tailwind 生成的实用程序类添加自定义前缀。当在可能存在命名冲突的现有 CSS 之上分层 Tailwind 时，非常有用
   // prefix: 'tw-',
 
-  // 将实用程序生成为!important，所有 Tailwind 的实用程序类都将生成为!important
-  // important: true,
-  // important: '#app',
-
   // 禁用
   corePlugins: {
   //  backgroundImage: false,
