@@ -120,9 +120,9 @@
 			</button> -->
 
 			<!-- 动态类名 -->
-			<div :class="` bg-pink-400 hover:bg-${hoverColor}-400`">
+			<button :class="` bg-${color}-400 hover:bg-${hoverColor}-400`">
         Hover me
-      </div> 
+      </button> 
 
       <!-- <div class="absolute top-10 right-10">position</div> -->
 			<!-- <div :class="`bg-${color}-300 hover:bg-${hoverColor}-500 hover:underline text-right text-green-400`">
@@ -130,7 +130,7 @@
       </div>  -->
 
       <!-- 自定义类 -->
-      <div class="btn">点击</div>
+      <!-- <div class="btn">点击</div> -->
 
       <!-- 兼容组件库 -->
       <!-- <el-button class="text-white bg-purple-500 ">点击</el-button> -->
