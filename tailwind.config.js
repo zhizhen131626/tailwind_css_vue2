@@ -30,27 +30,28 @@ module.exports = {
       },
       backgroundImage: {
         'back-img': "url('/src/assets/桌面壁纸01.jpg')",
-       }
+      },
+      containers: {
+        'xxx': '600px',
+      },
     },
     // 默认断点的设置来自于常见的设备分辨率。
-    screens: {
-      'hh': '875px', // 屏幕名称  断点开始的地方
-      // => @media (min-width: 875px) { ... }
-      'ee': {'max': '539px'},
-      // => @media (max-width: 539px) { ... }
-      'zz': {'min': '640px', 'max': '767px'},
-    },
+    // screens: {
+    //   'hh': '875px', // 屏幕名称  断点开始的地方
+    //   // => @media (min-width: 875px) { ... }
+    //   'ee': {'max': '539px'},
+    //   // => @media (max-width: 539px) { ... }
+    //   'zz': {'min': '640px', 'max': '767px'},
+    // },
   },
   // 可以使用 "@responsive" 指令来创建自己的响应式 "variants"，并使用它来实现基于窗口大小的样式变化效果。
   variants: {
     // display: ['responsive', 'hover', 'focus', 'active'],
     // 表示 padding 属性仅在鼠标悬停时生效。这意味着在鼠标悬停在元素上时，将会应用新的 padding 值。
+    // 列表末尾的变体将优先于列表开头的变体
     extend: {
-      // padding: ['hover'],
-      // borderColor: ['focus'],
-      // backgroundColor: ['active'],
-      // backgroundColor: ['group-focus'],
-      opacity: ['disabled'],
+      borderColor: ['focus', 'hover'],
+      backgroundColor: ['hover', 'focus'],
     }
   },
   // darkMode: 'media',
@@ -58,9 +59,9 @@ module.exports = {
   plugins: [
     // 官方插件
     require('@tailwindcss/forms'),
-    // require('@tailwindcss/typography'), // 增强排版风格
-    // require('@tailwindcss/aspect-ratio'),
-    // require('@tailwindcss/container-queries'),
+    require('@tailwindcss/aspect-ratio'), // 创建响应式的宽高比
+    require('@tailwindcss/container-queries'), // 容器查询，根据容器的尺寸来调整元素的样式
+    require('@tailwindcss/typography'), // 增强排版风格
 
     // 通过 编写插件 并使用 addBase 函数来添加基础样式：
     plugin(function({ addBase, theme }) {

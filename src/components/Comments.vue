@@ -106,6 +106,32 @@
       <!-- form插件 -->
 			<!-- <div class=" form-select">form</div> -->
 
+      <!-- aspect-ratio插件 -->
+      <!-- <div class="aspect-w-16 aspect-h-9">
+        <img src="../assets/桌面壁纸01.jpg" alt="">
+      </div> -->
+
+      <!-- container-queries插件 -->
+      <!-- <div class="@container">
+        <div class="@xxx:underline">
+          This text will be underlined when the container is larger than `32rem`
+        </div>
+      </div> -->
+
+      <!-- typography插件 -->
+      <!-- <article class="prose lg:prose-2xl">
+        <h2>Garlic bread with cheese: What the science tells us</h2>
+        <p>
+          For years parents have espoused the health benefits of eating garlic bread with cheese to their
+          children, with the food earning such an iconic status in our culture that kids will often dress
+          up as warm, cheesy loaf for Halloween.
+        </p>
+        <p>
+          But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases
+          springing up around the country.
+        </p>
+      </article> -->
+
       <!-- sr-only: 隐藏元素，当最小屏幕为sm时不隐藏 -->
 			<!-- <div class="sr-only sm:not-sr-only">111</div> -->
 
@@ -120,14 +146,15 @@
 			</button> -->
 
 			<!-- 动态类名 -->
-			<button :class="` bg-${color}-400 hover:bg-${hoverColor}-400`">
+			<!-- <button :class="`bg-pink-400 hover:bg-${hoverColor}-400`">
         Hover me
-      </button> 
+      </button>  -->
+
+      <!-- 变体 -->
+      <!-- 输入框同时悬停和聚焦，背景将是白色的，但边框将是黑色的 -->
+      <!-- <input class="focus:bg-white hover:bg-black focus:border-white hover:border-black" /> -->
 
       <!-- <div class="absolute top-10 right-10">position</div> -->
-			<!-- <div :class="`bg-${color}-300 hover:bg-${hoverColor}-500 hover:underline text-right text-green-400`">
-        Hover me
-      </div>  -->
 
       <!-- 自定义类 -->
       <!-- <div class="btn">点击</div> -->
